@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Photos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="busqueda">
+            <label for="fechaTierra">Earth Date:</label>
+            <select id="fechaTierra">
+                <option value="2015-07-02">2015-07-02</option>
+                <option value="2015-07-08">2015-07-08</option>
+                <option value="2018-03-05">2018-03-05</option>
+                <option value="2018-03-06">2018-03-06</option>
+            </select>
+            <button onclick="buscarFotos()">Find</button>
+        </div>
+        
+        <div class="contenido">
+            <div class="tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Rover Name</th>
+                            <th>Camera</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultadoFotos">
+                        <!-- Resultados de la API -->
+                    </tbody>
+                </table>
+                <div class="paginacion">
+                    <button id="previo" onclick="paginaAnterior()">Previous</button>
+                    <button id="siguiente" onclick="paginaSiguiente()">Next</button>
+                </div>
+            </div>
+            <div class="detalles">
+                <h2>Photo Detail</h2>
+                <img id="fotoDetalle" src="" alt="Foto de Marte">
+                <p id="infoDetalle"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
